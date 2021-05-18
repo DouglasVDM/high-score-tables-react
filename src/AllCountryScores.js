@@ -1,5 +1,7 @@
 import React from 'react';
 import { Data } from "./Data";
+import Country from "./Country";
+import PlayerNames from "./PlayerNames";
 
 function AllCountryScores() {
   return (
@@ -16,26 +18,6 @@ function AllCountryScores() {
         )
       })}
     </div>
-  )
-}
-
-function Country({ CountryName }) {
-  return (
-    <div className="country">
-      <h3>HIGH SCORES: {CountryName}</h3>
-    </div>
-  )
-}
-
-function PlayerNames({ Names }) {
-  return(
-  Names.map(el => {
-    return (
-      <div className="players">
-        <p>{el.n} {el.s}</p>
-      </div>
-    )
-  })
   )
 }
 
