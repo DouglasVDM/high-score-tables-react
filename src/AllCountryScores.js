@@ -9,9 +9,9 @@ function AllCountryScores() {
       <div className="heading">
         <h1>High Scores per Country</h1>
       </div>
-      {Data.map((country) => {
+      {Data.map((country, index) => {
         return (
-          <section className="info">            
+          <section key={index} className="info">
               <Country CountryName={country.name} style={{ backgroundColor: "red" }} />
               <PlayerNames Names={country.scores} />
           </section>
