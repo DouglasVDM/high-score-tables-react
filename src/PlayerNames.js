@@ -2,9 +2,9 @@ import React from 'react'
 
 function PlayerNames({ Names }) {
   return (
-    Names.map(el => {
+    Names.map((el, index) => {
       return (
-        <div className="players">
+        <div key={index} className="players">
           <p>{el.n} {el.s}</p>
         </div>
       )
