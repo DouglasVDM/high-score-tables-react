@@ -1,14 +1,34 @@
 import React from 'react'
 
+let compareDescendingOrder = (object1, object2, key) => {
+  const obj1 = Number(object1[key])
+  const obj2 = Number(object2[key])
+
+  if (obj1 < obj2) {
+    return 1
+  }
+  if (obj1 > obj2) {
+    return -1
+  }
+  return 0
+}
+
 function PlayerNames({ Names }) {
+  console.log(Names)
   return (
-    Names.map((el, index) => {
-      return (
-        <div key={index} style={{ border: "solid .25rem orange" }} className="players">
+    Names
+      .sort((score1, score2) => (
+        compareDescendingOrder(score1, score2, "s")
+      ))
+      .map((el, index) => (
+        <div
+          key={index}
+          style={{ border: "solid .1rem orange" }}
+          className="players">
           <p>{el.n} {el.s}</p>
         </div>
       )
-    })
+    )
   )
 }
 
