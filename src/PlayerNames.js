@@ -13,8 +13,11 @@ let compareDescendingOrder = (object1, object2, key) => {
   return 0
 }
 
+const capitaliseFirstLetter = (string) => (
+  string.length ? string.charAt(0).toUpperCase() + string.slice(1) : string
+)
+
 function PlayerNames({ Names }) {
-  console.log(Names)
   return (
     Names
       .sort((score1, score2) => (
@@ -25,7 +28,7 @@ function PlayerNames({ Names }) {
           key={index}
           style={{ border: "solid .1rem orange" }}
           className="players">
-          <p>{el.n} {el.s}</p>
+          <p>{capitaliseFirstLetter( el.n )} {el.s}</p>
         </div>
       )
     )
