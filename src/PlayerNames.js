@@ -2,8 +2,6 @@ import React from 'react'
 
 function PlayerNames({ Names, sortOrder }) {
 
-  console.log(sortOrder);
-
   const capitaliseFirstLetter = (string) => (
     string.length ? string.charAt(0).toUpperCase() + string.slice(1) : string
   )
