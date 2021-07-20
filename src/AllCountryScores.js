@@ -40,12 +40,12 @@ function AllCountryScores() {
         .sort((name1, name2) => compareDescendingOrder(name1.name, name2.name)    
         )
         .map((country, index) => {
-        return (
-          <section key={index} style={{ padding: "1rem", border: "solid .2rem green" }}className="info">
+          return (
+            <section key={index} style={{ padding: "1rem", border: "solid .2rem green" }} className="info">
               <Country CountryName={country.name} style={{ padding: "1rem", backgroundColor: "red" }} />
               <PlayerNames sortOrder={sortOrder} Names={country.scores} />
-          </section>
-        )
+            </section>
+          )
       })}
     </div>
   )
